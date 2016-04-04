@@ -5,6 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Card myCard = new Card();
 		myCard.ShowCard();
+		//no to kurwa 1 2 3
 		
 		
 	}
