@@ -5,7 +5,9 @@ public class Main {
 		// TODO Auto-generated method stub
 		Card myCard = new Card();
 		myCard.ShowCard();
-		//no to kurwa 1 2 3
+		//proszê nie przeklinaæ!
+		//tylko klepaæ oczko!
+		//proponuje, zeby kazdy cos dodawal co jakis czas i w ten sposob powstanie MO¯E coœ fajnego
 		
 		
 	}
