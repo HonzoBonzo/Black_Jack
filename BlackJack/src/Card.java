@@ -3,6 +3,7 @@ public class Card implements ConstValuesOfCards{
 	private String name; //2,3,4,5,6,7,8,9,10,J,Q,K,A
 	private int value; //2,3,4,5,6,7,8,9,10,11
 	private int color; // pik 1, kier 2, karo 3, trefl 4,
+
 	
 	public Card(){
 		name = "0";
@@ -76,6 +77,11 @@ public class Card implements ConstValuesOfCards{
 		System.out.println(", wartosc: " + value);
 	}
 	
-	
+	public Card LossCard() { //dobierz kolejna karte z talii
+		//TODO kto chce to napisac?
+		Card tmp = new Card();
+		return tmp;
+	}
+
 	
 }
