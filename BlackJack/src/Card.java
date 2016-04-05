@@ -10,6 +10,13 @@ public class Card implements ConstValuesOfCards{
 		color = 0;
 	}
 	
+	public Card(Card ob)
+	{
+		name = ob.name;
+		value = ob.value;
+		color = ob.color;
+	}
+	
 	public Card(String nam, int col){
 		name = nam;
 		SetValue(nam);
@@ -68,5 +75,7 @@ public class Card implements ConstValuesOfCards{
 		}
 		System.out.println(", wartosc: " + value);
 	}
+	
+	
 	
 }
