@@ -2,15 +2,15 @@
 public class Card implements ConstValuesOfCards{
 	private String name; //2,3,4,5,6,7,8,9,10,J,Q,K,A
 	private int value; //2,3,4,5,6,7,8,9,10,11
-	private String color; // kier, pik, trefl, karo
+	private int color; // pik 1, kier 2, karo 3, trefl 4,
 	
 	public Card(){
 		name = "0";
 		value = 0;
-		color = "none";
+		color = 0;
 	}
 	
-	public Card(String nam, String col){
+	public Card(String nam, int col){
 		name = nam;
 		SetValue(nam);
 		color = col;
@@ -49,7 +49,24 @@ public class Card implements ConstValuesOfCards{
 	};
 	
 	public void ShowCard(){
-		System.out.println("Karta " + name + " kolor " + color + ", wartosc: " + value);
+		System.out.print("Karta: " + name + ", kolor ");
+		switch(color){
+		case PIK:
+			System.out.print("PIK");
+			break;
+		case KIER:
+			System.out.print("KIER");
+			break;
+		case KARO:
+			System.out.print("KARO");
+			break;
+		case TREFL:
+			System.out.print("TREFL");
+			break;
+		default:
+			break;
+		}
+		System.out.println(", wartosc: " + value);
 	}
 	
 }

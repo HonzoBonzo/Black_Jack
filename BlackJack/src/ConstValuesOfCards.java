@@ -14,4 +14,9 @@ public interface ConstValuesOfCards {
 	int KING = 10;
 	int ACE = 11;
 
+	int PIK = 1;
+	int KIER = 2; 
+	int KARO = 3;
+	int TREFL = 4;
+	
 }
