@@ -76,12 +76,8 @@ public class Card implements ConstValuesOfCards{
 		}
 		System.out.println(", wartosc: " + value);
 	}
+
 	
-	public Card LossCard() { //dobierz kolejna karte z talii
-		//TODO kto chce to napisac?
-		Card tmp = new Card();
-		return tmp;
-	}
 
 	
 }
