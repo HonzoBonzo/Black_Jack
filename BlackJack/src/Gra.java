@@ -41,7 +41,8 @@ public class Gra {
 			{
 				graszDalej = false;
 				//krupier automat do konca
-				if(gracz.getSumaKart() > krupier.getSumaKart())
+				
+				/*if(gracz.getSumaKart() > krupier.getSumaKart())
 				{
 					msg.WygralPlayer("Player_name_default");
 				}
@@ -49,6 +50,7 @@ public class Gra {
 				{
 					msg.WygralKrupier();
 				}
+				*/
 			}
 			
 		}
