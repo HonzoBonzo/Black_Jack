@@ -20,6 +20,18 @@ public class Player {
 		
 	}
 	
+	public Boolean CheckHandOverHigh()
+	{
+		if(sumaKart > 21)
+			return true;
+		else return false;
+	}
+	
+	
+	public int getSumaKart()
+	{
+		return sumaKart;
+	}
 	
 	
 	void dobierzDwieKarty(){

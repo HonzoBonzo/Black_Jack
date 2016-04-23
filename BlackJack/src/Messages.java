@@ -1,7 +1,8 @@
+import java.util.Scanner;
 
-public final class Messages {
+public class Messages {
 
-	public void CzyGrasz()
+	public void DobierzKarte()
 	{
 		System.out.println("Graczu, czy chcesz dobrac kolejna karte?");
 	}
@@ -11,10 +12,26 @@ public final class Messages {
 		System.out.println("Graczu, czy chcesz zobaczyc swoja reke?");
 	}
 	
-	public void Wygrales(String s)
+	public void WygralKrupier()
 	{
-		System.out.println("Przegral: " + s);
-		System.out.println("Nastepnym razem sie uda :)\nDo zobaczenia");
+		System.out.println("Wygral: Krupier");
+		System.out.println("Gratulujemy i zapraszamy ponownie...");
+	}
+	
+	public void WygralPlayer(String s)
+	{
+		System.out.println("Wygral: " + s);
+		System.out.println("Gratulujemy i zapraszamy ponownie...");
+	}
+	
+	public Boolean CzyGraszDalej()
+	{
+		System.out.println("Graczu, czy chcesz grac dalej[t/n + enter]?");
+		Scanner input = new Scanner(System.in);
+		if(input.next() == "t" || input.next() == "T")
+			return true;
+		else
+			return false;
 	}
 	
 }
