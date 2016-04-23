@@ -33,6 +33,7 @@ public class Gra {
 				 *  if(krupier.CheckHandOverHigh())
 					{
 						msg.WygralPlayer("Player_name_default");
+						
 					}
 				 */
 			}
