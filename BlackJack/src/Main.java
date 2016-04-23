@@ -8,7 +8,9 @@ public class Main{
 		Talia t = new Talia();
 		t.wypelnianie();
 		t.wypisz();
-		
+		System.out.println("\nTasujemy\n");
+		t.tasuj();
+		t.wypisz();
 		
 		
 		//proszê nie przeklinaæ!
