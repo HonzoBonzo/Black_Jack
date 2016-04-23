@@ -3,6 +3,7 @@ interface Factory
 {
 	Card cardFactory(Colors c, Values v);
 }
+
 public class CardFactory implements Factory {
 
 	@Override
@@ -13,17 +14,17 @@ public class CardFactory implements Factory {
 			case PIK:
 			{
 				if(v.ordinal() + 1 > 10)
-					card =  new Pik(v.name(), c.name(), 10,c.ordinal());
+					card =  new Pik(v.name(), c.name(), 10, c.ordinal());
 				else
-					card =  new Pik(v.name(), c.name(), v.ordinal() + 2,c.ordinal());
+					card =  new Pik(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
 				break;
 			}
 			case TREFL:
 			{
 				if(v.ordinal() + 1 > 10)
-					card =  new Trefl(v.name(), c.name(), 10,c.ordinal());
+					card =  new Trefl(v.name(), c.name(), 10, c.ordinal());
 				else
-					card =  new Trefl(v.name(), c.name(), v.ordinal() + 2,c.ordinal());
+					card =  new Trefl(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
 				break;
 			}
 			case KARO:
@@ -31,7 +32,7 @@ public class CardFactory implements Factory {
 				if(v.ordinal() + 1 > 10)
 					card =  new Karo(v.name(), c.name(), 10,c.ordinal());
 				else
-					card =  new Karo(v.name(), c.name(), v.ordinal() + 2,c.ordinal());
+					card =  new Karo(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
 				break;
 			}
 			case KIER:
@@ -39,7 +40,7 @@ public class CardFactory implements Factory {
 				if(v.ordinal() + 1 > 10)
 					card =  new Kier(v.name(), c.name(), 10,c.ordinal());
 				else
-					card =  new Kier(v.name(), c.name(), v.ordinal() + 2,c.ordinal());
+					card =  new Kier(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
 				break;
 			}
 		}

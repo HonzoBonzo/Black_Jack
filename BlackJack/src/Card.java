@@ -9,7 +9,8 @@ public abstract class Card{
 		public String toString(){
 			return "Kolor: " + this.kolor + " Figura: " + this.name;
 		}
-		
+	
+	 
 }
 
 class Pik extends Card

@@ -6,11 +6,13 @@ public class Talia implements Container{
 	int l=0;
 	Card[] talia = new Card[Values.L_FIGUR.ordinal() * Colors.L_KOLOROW.ordinal()];
 	CardFactory fabryka = new CardFactory();
+	Iterator iterator = this.getIterator();
+	
 	
 	void wypelnianie()
 	{
-	for(int i = 0; i < Colors.L_KOLOROW.ordinal(); i++)
-		for(int j = 0;j < Values.L_FIGUR.ordinal(); j++)
+		for(int i = 0; i < Colors.L_KOLOROW.ordinal(); i++)
+		for(int j = 0; j < Values.L_FIGUR.ordinal(); j++)
 		{
 			talia[l++] = fabryka.cardFactory(Colors.values()[i], Values.values()[j]);
 		}
@@ -53,28 +55,26 @@ public class Talia implements Container{
 		return new NameIterator();
 	}
 	
-	  private class NameIterator implements Iterator {
+	private class NameIterator implements Iterator {
 	
-	      int index;
+		int index;
 	
-	      @Override
-	      public boolean hasNext() {
-	      
-	         if(index < talia.length){
+	    @Override
+	    public boolean hasNext() {
+	    	if(index < talia.length){
 	            return true;
-	         }
-	         return false;
-	      }
+	        }
+	        return false;
+	    }
 	
-	      @Override
-	      public Object next() {
-	      
-	         if(this.hasNext()){
-	            return talia[index++];
-	         }
-	         return null;
-	      }		
-	   }
+	    @Override
+	    public Object next() {
+	    	if(this.hasNext()){
+	    		return talia[index++];
+	        }
+	        return null;
+	    }		
+	}
 	
 	/*
 	Card zwrocKarte()
