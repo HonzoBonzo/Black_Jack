@@ -7,6 +7,7 @@ public class Talia implements Container{
 	Card[] talia = new Card[Values.L_FIGUR.ordinal() * Colors.L_KOLOROW.ordinal()];
 	CardFactory fabryka = new CardFactory();
 	
+	
 	void wypelnianie()
 	{
 		for(int i = 0; i < Colors.L_KOLOROW.ordinal(); i++)
