@@ -13,9 +13,11 @@ public class Player {
 	}
 	
 	void pokazReke(){
-		System.out.println("\nKarty gracza: \n");
+		System.out.println("\nKarty gracza: ");
+		System.out.println("Suma: " + sumaKart);
 		for(int i=0; i< ileKart; i++)
 			System.out.println(reka[i]);
+		
 	}
 	
 	
