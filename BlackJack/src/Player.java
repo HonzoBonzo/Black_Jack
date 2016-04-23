@@ -7,7 +7,9 @@ public class Player {
 	private Card[] reka;	//kart gracza "na rêce"
 	
 	
-	
+	void pokazReke(){
+		
+		 	}
 	
 	
 }
