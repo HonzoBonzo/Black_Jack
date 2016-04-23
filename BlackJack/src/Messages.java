@@ -28,7 +28,7 @@ public class Messages {
 	{
 		System.out.println("Graczu, czy chcesz grac dalej[t/n + enter]?");
 		Scanner input = new Scanner(System.in);
-		if(input.next() == "t" || input.next() == "T")
+		if(input.next().equals("t")  || input.next().equals("T"))
 			return true;
 		else
 			return false;

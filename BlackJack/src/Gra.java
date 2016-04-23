@@ -26,31 +26,23 @@ public class Gra {
 				gracz.dobierzKarte();
 				if(gracz.CheckHandOverHigh())
 				{
-					msg.WygralKrupier();
+					this.End();
+					graszDalej = false;
 				}
+				
 				//krupier.automat();
 				/*
 				 *  if(krupier.CheckHandOverHigh())
 					{
-						msg.WygralPlayer("Player_name_default");
-						
+						this.End();
+						graszDalej = false;
 					}
 				 */
 			}
 			else
 			{
 				graszDalej = false;
-				//krupier automat do konca
 				
-				/*if(gracz.getSumaKart() > krupier.getSumaKart())
-				{
-					msg.WygralPlayer("Player_name_default");
-				}
-				else
-				{
-					msg.WygralKrupier();
-				}
-				*/
 			}
 			
 		}
@@ -59,6 +51,22 @@ public class Gra {
 		//gracz.dobierzKarte();
 		//gracz.dobierzDwieKarty();
 		gracz.pokazReke();
+		//krupier.pokazReke();
 		
+	}
+	
+	void End()
+	{
+		//krupier automat do konca
+		
+		/*if(gracz.getSumaKart() > krupier.getSumaKart())
+		{
+			msg.WygralPlayer("Player_name_default");
+		}
+		else
+		{
+			msg.WygralKrupier();
+		}
+		*/
 	}
 }
