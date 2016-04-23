@@ -1,11 +1,15 @@
 
-public class Main implements ConstValuesOfCards{
+public class Main{
 
 	public static void main(String[] args) {
 		
 		System.out.println("proba Mavena");
-		Card myCard = new Card("QUEEN",KARO);
-		myCard.ShowCard();
+		
+		Talia t = new Talia();
+		t.wypelnianie();
+		t.wypisz();
+		
+		
 		
 		//proszê nie przeklinaæ!
 		//tylko klepaæ oczko!
