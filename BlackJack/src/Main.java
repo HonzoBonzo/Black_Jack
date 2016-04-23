@@ -3,6 +3,7 @@ public class Main implements ConstValuesOfCards{
 
 	public static void main(String[] args) {
 		
+		System.out.println("proba Mavena");
 		Card myCard = new Card("QUEEN",KARO);
 		myCard.ShowCard();
 		
