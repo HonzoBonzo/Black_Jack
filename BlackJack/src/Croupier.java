@@ -1,11 +1,11 @@
 
-public class croupier {
+public class Croupier {
 	private int sumaKart;
 	private int ileKart;	//ile kart "na rêce"
 	private Card[] reka = new Card[10];	//kart gracza "na rêce"
 	private Talia talia;
 	
-	croupier(Talia t){
+	Croupier(Talia t){
 		talia = t;
 	}
 	
@@ -35,7 +35,7 @@ public class croupier {
 		
 		sumaKart += reka[ileKart++].value;
 	}
-	void bot(){
+	void Bot(){
 		if(sumaKart <= 16){
 			dobierzKarte();
 		}

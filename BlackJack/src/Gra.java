@@ -2,7 +2,7 @@
 public class Gra {
 
 	Player gracz;
-	croupier croupier;
+	Croupier croupier;
 	public Talia tal = new Talia();
 	Boolean graszDalej;
 	Messages msg = new Messages();
@@ -13,7 +13,7 @@ public class Gra {
 		tal.wypelnianie();
 		tal.tasuj();
 		gracz = new Player(tal);
-		croupier = new croupier(tal);
+		croupier = new Croupier(tal);
 		
 		
 		
@@ -29,7 +29,7 @@ public class Gra {
 					graszDalej = false;
 				}
 				
-				croupier.bot();
+				croupier.Bot();
 				
 				  if(croupier.CheckHandOverHigh())
 				  {
