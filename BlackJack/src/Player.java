@@ -34,7 +34,7 @@ public class Player {
 	}
 	
 	
-	void dobierzDwieKarty(){
+	/*void dobierzDwieKarty(){
 
 		if(talia.iterator.hasNext())
 			reka[0] = (Card)talia.iterator.next();	//dobieram kolejn¹ kartê
@@ -47,7 +47,7 @@ public class Player {
 		ileKart += 2;
 		sumaKart += reka[0].value;
 		sumaKart += reka[1].value;
-	}
+	}*/
 	
 	void dobierzKarte(){
 		if(talia.iterator.hasNext())

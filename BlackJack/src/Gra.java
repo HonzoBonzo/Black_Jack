@@ -12,10 +12,9 @@ public class Gra {
 		graszDalej = true;
 		tal.wypelnianie();
 		tal.tasuj();
-		gracz = new Player(tal);	
-		gracz.dobierzDwieKarty();
+		gracz = new Player(tal);
 		croupier = new croupier(tal);
-		croupier.dobierzDwieKarty();
+		
 		
 		
 		while(graszDalej)
