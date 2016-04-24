@@ -4,12 +4,11 @@ public class Gra {
 	Player gracz;
 	Croupier croupier;
 	public Talia tal = new Talia();
-	Boolean graszDalej;
+	Boolean koniec = false;
 	Messages msg = new Messages();
 	
 	void start(){
 		
-		graszDalej = true;
 		tal.wypelnianie();
 		tal.tasuj();
 		gracz = new Player(tal);
@@ -25,28 +24,33 @@ public class Gra {
 		{
 			
 			gracz.dobierzKarte();
-			gracz.pokazReke();			//gracz pokazuje swoje karty
 			if(gracz.CheckHandOverHigh())
 			{
-				this.End();
-				break;	//koniec
+				koniec = true;
+				break;	
 			}
+				
+			
+			gracz.pokazReke();			//gracz pokazuje swoje karty
 						
 		}
 		
 		//jesli jest tutaj, to gracz postanowi³ sprawdziæ
 		//i dopiero teraz w³¹cza siê do gry krupier
 		
-		//pêtla krupiera
-		while(croupier.Bot())
+		if(koniec == false)
 		{
-			croupier.dobierzKarte();
-			if(croupier.CheckHandOverHigh())
+			//pêtla krupiera
+			while(croupier.Bot())
 			{
-				this.End();
-				break;
+				croupier.dobierzKarte();
+				if(croupier.CheckHandOverHigh())
+					break;
+				
 			}
 		}
+		
+		
 		
 		this.End();
 		
