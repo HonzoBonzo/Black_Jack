@@ -7,9 +7,11 @@ public abstract class Card{
 	 
 	 @Override
 		public String toString(){
-			return "Kolor: " + this.kolor + " Figura: " + this.name;
+			//return "Kolor: " + this.kolor + " Figura: " + this.name;
+		 	return this.name + " " + this.kolor;	//tak chyba jednak przejrzyœciej
 		}
-	
+	 
+	 
 	 
 }
 

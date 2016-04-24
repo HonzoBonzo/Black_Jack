@@ -3,7 +3,7 @@ public class Player {
 
 	private int sumaKart;
 	private int ileKart;	//ile kart "na rêce"
-	private Card[] reka = new Card[10];;	//kart gracza "na rêce"
+	private Card[] reka = new Card[10];	//kart gracza "na rêce"
 	private int zaklad; 	//ile pieniedzy ma postawione w obecnym zakladzie
 	private int pieniadze;	//ile pieniedzy ma w ogole
 	private Talia talia;
@@ -13,14 +13,30 @@ public class Player {
 	}
 	
 	void pokazReke(){
-		System.out.println("\nKarty gracza: \n");
+		System.out.println("\nKarty gracza: ");
+		System.out.println("Suma: " + sumaKart);
 		for(int i=0; i< ileKart; i++)
 			System.out.println(reka[i]);
+		
+		System.out.println();
+		
+	}
+	
+	public Boolean CheckHandOverHigh()
+	{
+		if(sumaKart > 21)
+			return true;
+		else return false;
 	}
 	
 	
+	public int getSumaKart()
+	{
+		return sumaKart;
+	}
 	
-	void dobierzDwieKarty(){
+	
+	/*void dobierzDwieKarty(){
 
 		if(talia.iterator.hasNext())
 			reka[0] = (Card)talia.iterator.next();	//dobieram kolejn¹ kartê
@@ -31,12 +47,17 @@ public class Player {
 		System.out.println(reka[0]);
 		System.out.println(reka[1]);
 		ileKart += 2;
-	}
+		sumaKart += reka[0].value;
+		sumaKart += reka[1].value;
+	}*/
 	
 	void dobierzKarte(){
 		if(talia.iterator.hasNext())
 			reka[ileKart] = (Card)talia.iterator.next();	//dobieram kolejn¹ kartê
-		ileKart++;
+		
+	//	System.out.println("Dobrana karta gracza: ");
+	//	System.out.println(reka[ileKart]);
+		sumaKart += reka[ileKart++].value;
 	}
 	
 }
