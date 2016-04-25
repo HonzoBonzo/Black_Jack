@@ -9,6 +9,7 @@ public class Player {
 	private Talia talia;
 	
 	Player(Talia t){
+		System.out.println("Twoj poczatkowy stan konta: " + this.pieniadze);
 		talia = t;
 	}
 	
