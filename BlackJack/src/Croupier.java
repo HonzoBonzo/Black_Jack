@@ -51,5 +51,12 @@ public class Croupier {
 		else 
 			return false;
 	}
+	
+	void zeruj()
+	{
+		this.reka = new Card[10];
+		this.ileKart = 0;
+		this.sumaKart = 0;
+	}
 }
 

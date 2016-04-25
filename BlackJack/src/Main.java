@@ -3,11 +3,8 @@ public class Main{
 
 	public static void main(String[] args) {
 		
-		Gra gra = new Gra();
-		gra.start();
-		
-		
-		
+		Fasada fasada = new Fasada();
+		fasada.action();		
 	}
 
 }

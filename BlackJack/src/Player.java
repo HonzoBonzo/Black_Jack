@@ -5,7 +5,7 @@ public class Player {
 	private int ileKart;	//ile kart "na rêce"
 	private Card[] reka = new Card[10];	//kart gracza "na rêce"
 	private int zaklad; 	//ile pieniedzy ma postawione w obecnym zakladzie
-	private int pieniadze;	//ile pieniedzy ma w ogole
+	private int pieniadze = 1000;	//ile pieniedzy ma w ogole
 	private Talia talia;
 	
 	Player(Talia t){
@@ -58,6 +58,36 @@ public class Player {
 	//	System.out.println("Dobrana karta gracza: ");
 	//	System.out.println(reka[ileKart]);
 		sumaKart += reka[ileKart++].value;
+	}
+	
+	void postawZaklad()
+	{
+		zaklad = Messages.stawka(pieniadze);		
+	}
+	
+	void wygralZaklad()
+	{
+		this.pieniadze+=zaklad;
+		Messages.wygrana(zaklad, this.pieniadze);
+	}
+	
+	void przegralZaklad()
+	{
+		this.pieniadze-=zaklad;
+		Messages.przegrana(zaklad, this.pieniadze);
+	}
+	
+	int getPieniadze()
+	{
+		return pieniadze;
+		
+	}
+	
+	void zeruj()
+	{
+		this.reka = new Card[10];
+		this.ileKart = 0;
+		this.sumaKart = 0;
 	}
 	
 }
