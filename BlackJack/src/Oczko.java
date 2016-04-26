@@ -40,7 +40,7 @@ public class Oczko {
 				}
 					
 				
-				gracz.pokazReke();			//gracz pokazuje swoje karty
+				gracz.pokazReke();		//gracz pokazuje swoje karty
 							
 			}
 			
