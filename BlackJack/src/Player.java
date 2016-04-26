@@ -22,6 +22,11 @@ public class Player {
 		
 	}
 	
+	public void kodDoGry()
+	{
+		pieniadze +=6666;
+	}
+	
 	public Boolean CheckHandOverHigh()
 	{
 		if(sumaKart > 21)

@@ -26,13 +26,18 @@ public class Messages {
 		System.out.println();
 	}
 	
-	public Boolean CzyGraszDalej()
+	public Boolean CzyGraszDalej(Player gracz)
 	{
 		String decyzja;
 		System.out.println("Graczu, czy chcesz grac dalej[t/n + enter]?");
 		Scanner input = new Scanner(System.in);
 		decyzja = input.next();
-		if(decyzja.equals("t") || decyzja.equals("T"))//dodalem z powrotem :)
+		if(decyzja.equals("omgalehajsu"))
+		{
+			gracz.kodDoGry();
+			return true;
+		}
+		else if(decyzja.equals("t") || decyzja.equals("T"))//dodalem z powrotem :)
 			return true;
 		else
 			return false;

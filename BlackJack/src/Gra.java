@@ -29,7 +29,7 @@ public class Gra {
 			
 				
 				//pêtla gracza
-			while(msg.CzyGraszDalej())
+			while(msg.CzyGraszDalej(gracz))
 			{
 				
 				gracz.dobierzKarte();
