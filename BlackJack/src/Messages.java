@@ -28,9 +28,11 @@ public class Messages {
 	
 	public Boolean CzyGraszDalej()
 	{
+		String decyzja;
 		System.out.println("Graczu, czy chcesz grac dalej[t/n + enter]?");
 		Scanner input = new Scanner(System.in);
-		if(input.next().equals("t"))//wywali³em to lub bo przy odpowiedzi n trzeba bylo odpowiadaæ drugi raz
+		decyzja = input.next();
+		if(decyzja.equals("t") || decyzja.equals("T"))//dodalem z powrotem :)
 			return true;
 		else
 			return false;
