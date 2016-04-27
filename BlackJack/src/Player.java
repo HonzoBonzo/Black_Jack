@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class Player {
 
@@ -7,6 +9,7 @@ public class Player {
 	private int zaklad; 	//ile pieniedzy ma postawione w obecnym zakladzie
 	private int pieniadze = 1000;	//ile pieniedzy ma w ogole
 	private Talia talia;
+	private String NickName = "Default";
 	
 	Player(Talia t){
 		talia = t;
@@ -20,6 +23,13 @@ public class Player {
 		
 		System.out.println();
 		
+	}
+	
+	void setNickName(){
+		
+		Scanner input = new Scanner(System.in);
+		NickName = input.next();
+		System.out.println("Twój pseudonim to" + NickName);
 	}
 	
 	public void kodDoGry()

@@ -19,6 +19,7 @@ public class Gra {
 			
 			tal.tasuj();
 			gracz.postawZaklad();
+			gracz.setNickName();
 			
 			this.rozdaniePoczatkowe();	//rozdajemy dwie karty na zmianê graczowi i krupierowi
 	
