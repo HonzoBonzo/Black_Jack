@@ -26,10 +26,14 @@ public class Player {
 	}
 	
 	void setNickName(){
-		
+		System.out.println("Podaj swój pseudonim.");
 		Scanner input = new Scanner(System.in);
 		NickName = input.next();
-		System.out.println("Twój pseudonim to" + NickName);
+		System.out.println("Twój pseudonim to " + NickName);
+	}
+	
+	String getNickName(){
+		return NickName;
 	}
 	
 	public void kodDoGry()

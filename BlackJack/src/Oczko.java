@@ -18,6 +18,7 @@ public class Oczko {
 		{
 			
 			tal.tasuj();
+			gracz.setNickName();
 			gracz.postawZaklad();
 			
 			this.rozdaniePoczatkowe();	//rozdajemy dwie karty na zmianê graczowi i krupierowi
@@ -100,14 +101,14 @@ public class Oczko {
 		{
 			System.out.println("Przekroczona suma 21 u krupiera");
 			gracz.wygralZaklad();
-			msg.WygralPlayer("Player_name_default");
+			msg.WygralPlayer(gracz.getNickName());
 		}
 		
 		else if(gracz.getSumaKart() > croupier.getSumaKart())
 		{
 			System.out.println("Gracz jest bli¿ej 'oczka'");
 			gracz.wygralZaklad();
-			msg.WygralPlayer("Player_name_default");
+			msg.WygralPlayer(gracz.getNickName());
 		}
 		
 		else if(gracz.getSumaKart() < croupier.getSumaKart())

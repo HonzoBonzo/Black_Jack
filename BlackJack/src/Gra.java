@@ -14,12 +14,15 @@ public class Gra {
 		
 		gracz = new Player(tal);
 		croupier = new Croupier(tal);
+		
+		gracz.setNickName();
+		
 		while(exit == false)
 		{
 			
 			tal.tasuj();
 			gracz.postawZaklad();
-			gracz.setNickName();
+			
 			
 			this.rozdaniePoczatkowe();	//rozdajemy dwie karty na zmianê graczowi i krupierowi
 	
@@ -101,14 +104,14 @@ public class Gra {
 		{
 			System.out.println("Przekroczona suma 21 u krupiera");
 			gracz.wygralZaklad();
-			msg.WygralPlayer("Player_name_default");
+			msg.WygralPlayer(gracz.getNickName());
 		}
 		
 		else if(gracz.getSumaKart() > croupier.getSumaKart())
 		{
 			System.out.println("Gracz jest bli¿ej 'oczka'");
 			gracz.wygralZaklad();
-			msg.WygralPlayer("Player_name_default");
+			msg.WygralPlayer(gracz.getNickName());
 		}
 		
 		else if(gracz.getSumaKart() < croupier.getSumaKart())
