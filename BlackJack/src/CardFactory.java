@@ -43,8 +43,6 @@ public class CardFactory implements Factory {
 					card =  new Kier(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
 				break;
 			}
-		default:
-			break;
 		}
 		
 		

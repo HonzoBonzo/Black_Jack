@@ -2,7 +2,7 @@
 public class Gra {
 
 	Player gracz;
-	Croupier croupier;
+//	Krupier krupier;
 	public Talia tal = new Talia();
 	Boolean graszDalej;
 	Messages msg = new Messages();
@@ -12,9 +12,10 @@ public class Gra {
 		graszDalej = true;
 		tal.wypelnianie();
 		tal.tasuj();
-		gracz = new Player(tal);
-		croupier = new Croupier(tal);
-		
+		gracz = new Player(tal);	
+		gracz.dobierzDwieKarty();
+		//krupier = new Krupier(tal);	
+		//krupier.dobierzDwieKarty();
 		
 		
 		while(graszDalej)
@@ -29,14 +30,14 @@ public class Gra {
 					graszDalej = false;
 				}
 				
-				croupier.Bot();
-				
-				  if(croupier.CheckHandOverHigh())
-				  {
-					  this.End();
-					  graszDalej = false;
-				  }
-				 
+				//krupier.automat();
+				/*
+				 *  if(krupier.CheckHandOverHigh())
+					{
+						this.End();
+						graszDalej = false;
+					}
+				 */
 			}
 			else
 			{
@@ -58,7 +59,7 @@ public class Gra {
 	{
 		//krupier automat do konca
 		
-		if(gracz.getSumaKart() > croupier.getSumaKart())
+		/*if(gracz.getSumaKart() > krupier.getSumaKart())
 		{
 			msg.WygralPlayer("Player_name_default");
 		}
@@ -66,6 +67,6 @@ public class Gra {
 		{
 			msg.WygralKrupier();
 		}
-		
+		*/
 	}
 }

@@ -6,6 +6,7 @@ public class Talia implements Container{
 	int l=0;
 	Card[] talia = new Card[Values.L_FIGUR.ordinal() * Colors.L_KOLOROW.ordinal()];
 	CardFactory fabryka = new CardFactory();
+	Iterator iterator = this.getIterator();
 	
 	
 	void wypelnianie()
