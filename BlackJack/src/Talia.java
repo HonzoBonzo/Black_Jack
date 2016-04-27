@@ -6,6 +6,7 @@ public class Talia implements Container{
 	int l=0;
 	Card[] talia = new Card[Values.L_FIGUR.ordinal() * Colors.L_KOLOROW.ordinal()];
 	CardFactory fabryka = new CardFactory();
+	CardFactoryOczko fabrykaOczko = new CardFactoryOczko();
 	Iterator iterator = this.getIterator();
 	
 	
@@ -16,6 +17,15 @@ public class Talia implements Container{
 		{
 			talia[l++] = fabryka.cardFactory(Colors.values()[i], Values.values()[j]);
 		}
+	}
+	
+	void wypelnianieOczko()
+	{
+		for(int i = 0; i < Colors.L_KOLOROW.ordinal(); i++)
+			for(int j = 0; j < Values.L_FIGUR.ordinal(); j++)
+			{
+				talia[l++] = fabrykaOczko.cardFactory(Colors.values()[i], Values.values()[j]);
+			}
 	}
 	
 	void wypisz()

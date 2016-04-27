@@ -5,7 +5,7 @@ public class Player {
 	private int ileKart;	//ile kart "na rêce"
 	private Card[] reka = new Card[10];	//kart gracza "na rêce"
 	private int zaklad; 	//ile pieniedzy ma postawione w obecnym zakladzie
-	private int pieniadze;	//ile pieniedzy ma w ogole
+	private int pieniadze = 1000;	//ile pieniedzy ma w ogole
 	private Talia talia;
 	
 	Player(Talia t){
@@ -18,6 +18,13 @@ public class Player {
 		for(int i=0; i< ileKart; i++)
 			System.out.println(reka[i]);
 		
+		System.out.println();
+		
+	}
+	
+	public void kodDoGry()
+	{
+		pieniadze +=6666;
 	}
 	
 	public Boolean CheckHandOverHigh()
@@ -34,7 +41,7 @@ public class Player {
 	}
 	
 	
-	void dobierzDwieKarty(){
+	/*void dobierzDwieKarty(){
 
 		if(talia.iterator.hasNext())
 			reka[0] = (Card)talia.iterator.next();	//dobieram kolejn¹ kartê
@@ -47,13 +54,45 @@ public class Player {
 		ileKart += 2;
 		sumaKart += reka[0].value;
 		sumaKart += reka[1].value;
-	}
+	}*/
 	
 	void dobierzKarte(){
 		if(talia.iterator.hasNext())
 			reka[ileKart] = (Card)talia.iterator.next();	//dobieram kolejn¹ kartê
 		
+	//	System.out.println("Dobrana karta gracza: ");
+	//	System.out.println(reka[ileKart]);
 		sumaKart += reka[ileKart++].value;
+	}
+	
+	void postawZaklad()
+	{
+		zaklad = Messages.stawka(pieniadze);		
+	}
+	
+	void wygralZaklad()
+	{
+		this.pieniadze+=zaklad;
+		Messages.wygrana(zaklad, this.pieniadze);
+	}
+	
+	void przegralZaklad()
+	{
+		this.pieniadze-=zaklad;
+		Messages.przegrana(zaklad, this.pieniadze);
+	}
+	
+	int getPieniadze()
+	{
+		return pieniadze;
+		
+	}
+	
+	void zeruj()
+	{
+		this.reka = new Card[10];
+		this.ileKart = 0;
+		this.sumaKart = 0;
 	}
 	
 }

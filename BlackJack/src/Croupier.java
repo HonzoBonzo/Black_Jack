@@ -9,8 +9,13 @@ public class Croupier {
 		talia = t;
 	}
 	
+	void pokazJedna(){
+		System.out.println("Karta krupiera: ");
+		System.out.println(reka[0]);
+	}
+	
 	void pokazReke(){
-		System.out.println("\nKarty gracza: ");
+		System.out.println("\nKarty krupiera: ");
 		System.out.println("Suma: " + sumaKart);
 		for(int i=0; i< ileKart; i++)
 			System.out.println(reka[i]);
@@ -35,13 +40,23 @@ public class Croupier {
 		
 		sumaKart += reka[ileKart++].value;
 	}
-	void Bot(){
-		if(sumaKart <= 16){
-			dobierzKarte();
-		}
-		else if(sumaKart >= 17){
-			
-		}
+	
+	
+	//sprawdza czy ma dobraæ, jak dobiera to zwraca true
+	boolean Bot(){
+		if(sumaKart <= 16)
+			return true;
+		
+		
+		else 
+			return false;
+	}
+	
+	void zeruj()
+	{
+		this.reka = new Card[10];
+		this.ileKart = 0;
+		this.sumaKart = 0;
 	}
 }
 

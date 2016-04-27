@@ -13,7 +13,7 @@ public class CardFactory implements Factory {
 		{
 			case PIK:
 			{
-				if(v.ordinal() + 1 > 10)
+				if(v.ordinal() + 2 > 10)
 					card =  new Pik(v.name(), c.name(), 10, c.ordinal());
 				else
 					card =  new Pik(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
@@ -21,7 +21,7 @@ public class CardFactory implements Factory {
 			}
 			case TREFL:
 			{
-				if(v.ordinal() + 1 > 10)
+				if(v.ordinal() + 2 > 10)
 					card =  new Trefl(v.name(), c.name(), 10, c.ordinal());
 				else
 					card =  new Trefl(v.name(), c.name(), v.ordinal() + 2, c.ordinal());
@@ -29,7 +29,7 @@ public class CardFactory implements Factory {
 			}
 			case KARO:
 			{
-				if(v.ordinal() + 1 > 10)
+				if(v.ordinal() + 2 > 10)
 					card =  new Karo(v.name(), c.name(), 10,c.ordinal());
 				else
 					card =  new Karo(v.name(), c.name(), v.ordinal() + 2, c.ordinal());

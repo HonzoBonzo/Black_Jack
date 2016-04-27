@@ -1,5 +1,5 @@
 
-public class Gra {
+public class Oczko {
 
 	Player gracz;
 	private boolean exit = false;
@@ -10,7 +10,7 @@ public class Gra {
 	
 	void start(){
 		
-		tal.wypelnianie();
+		tal.wypelnianieOczko();
 		
 		gracz = new Player(tal);
 		croupier = new Croupier(tal);
@@ -40,7 +40,7 @@ public class Gra {
 				}
 					
 				
-				gracz.pokazReke();			//gracz pokazuje swoje karty
+				gracz.pokazReke();		//gracz pokazuje swoje karty
 							
 			}
 			
